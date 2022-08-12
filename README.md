@@ -168,3 +168,14 @@ public class Phone {
 ```
 
 
+
+使用JMH对改方法进行20轮测试平均用时918ns/op
+相同的用例使用fastjson(1.2.73) 20轮测试平均耗时0.794us/op
+
+```
+# Run complete. Total time: 00:01:22
+
+Benchmark                 Mode  Cnt    Score   Error  Units
+Main.benchmark_fast_json  avgt   20    0.794 ± 0.002  us/op
+Main.benchmark_json_lib   avgt   20  918.040 ± 5.283  us/op
+```
